@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: rgb(60, 59, 59);
+}
+
+.calculator {
+    width: 100%;
+    max-width: 400px;   /* Controls desktop size */
+    background-color: rgb(193, 191, 191);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 3px -3px 1px 2.5px rgb(239, 236, 236);
+}
+
+/* Input */
+.input-container {
+    margin-bottom: 20px;
+}
+
+#input {
+    width: 100%;
+    height: 60px;
+    padding: 12px;
+    background: linear-gradient(rgb(252, 252, 252),rgb(186, 183, 183));
+    border-top-color: rgb(105, 98, 98);
+    border-right-color: rgb(105, 98, 98);
+    border-left-color: white;
+    border-bottom-color: white;
+    border-width: 3px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    aspect-ratio: 1 / 1;   /* Makes buttons perfectly square */
+    font-size: 1.2rem;
+    background: linear-gradient(#ebebeb,#dcdcdc);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px -1px 2px 1px rgb(245, 243, 243),
+                inset 2px -1px 2px 1px rgb(159, 157, 157);
+}
+
+#red-btn {
+    background: linear-gradient(red,crimson);
+    color: white;
+    box-shadow: 2px -1px 2px 1px rgb(238, 84, 84),
+                inset 2px -1px 2px 1px rgb(154, 8, 8);
+}
+
+#operators {
+    color: white;
+    background: linear-gradient(rgb(130, 129, 129),rgb(0, 0, 0));
+    box-shadow: 2px -1px 2px 1px rgb(245, 243, 243),
+                inset 2px -2px 2px 1px rgb(77, 76, 76);
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+#input:focus {
+    outline: none;
+}
+
+/* 📱 Small Devices */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    #input {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
